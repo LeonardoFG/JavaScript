@@ -38,10 +38,8 @@ for (var i = 0; i < pacientes.length; i++) {
     }
 }
 
-titulo.addEventListener("click", function (){
-    console.log("Olha só posso chamar uma função anônima.")
-});
+var botaoAdicinar = document.querySelector("#adicionar-paciente")
 
-function mostraMensagem(){
-    console.log("Olá eu fui clicado!");
-}
+botaoAdicinar.addEventListener("click", function (){
+    console.log("Oi, cliquei no Botão !!!")
+});  // nesse caso é nescessário o ; para encerrar a linha
