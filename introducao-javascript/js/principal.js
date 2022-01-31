@@ -38,7 +38,9 @@ for (var i = 0; i < pacientes.length; i++) {
     }
 }
 
-titulo.addEventListener("click", mostraMensagem);
+titulo.addEventListener("click", function (){
+    console.log("Olha só posso chamar uma função anônima.")
+});
 
 function mostraMensagem(){
     console.log("Olá eu fui clicado!");
