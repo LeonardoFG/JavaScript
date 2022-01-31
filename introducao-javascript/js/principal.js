@@ -37,3 +37,9 @@ for (var i = 0; i < pacientes.length; i++) {
         tdImc.textContent = imc.toFixed(2);
     }
 }
+
+titulo.addEventListener("click", mostraMensagem);
+
+function mostraMensagem(){
+    console.log("Olá eu fui clicado!");
+}
