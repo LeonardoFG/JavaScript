@@ -41,6 +41,15 @@ for (var i = 0; i < pacientes.length; i++) {
 var botaoAdicinar = document.querySelector("#adicionar-paciente")
 
 botaoAdicinar.addEventListener("click", function (event){
-    event.preventDefault();
-    console.log("Oi eu sou o botao e fui clicado");
+    var botaoAdicionar = document.querySelector("#adicionar-paciente");
+    botaoAdicionar.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        var form = document.querySelector("#form-adiciona");
+
+        var nome = form.nome.value;
+        var peso = form.peso.value;
+        var altura = form.altura.value;
+        var gordura = form.gordura.value;
+    });
 });  // nesse caso é nescessário o ; para encerrar a linha
