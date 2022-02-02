@@ -40,6 +40,7 @@ for (var i = 0; i < pacientes.length; i++) {
 
 var botaoAdicinar = document.querySelector("#adicionar-paciente")
 
-botaoAdicinar.addEventListener("click", function (){
-    console.log("Oi, cliquei no Botão !!!")
+botaoAdicinar.addEventListener("click", function (event){
+    event.preventDefault();
+    console.log("Oi eu sou o botao e fui clicado");
 });  // nesse caso é nescessário o ; para encerrar a linha
