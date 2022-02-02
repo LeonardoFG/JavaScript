@@ -56,5 +56,13 @@ for (var i = 0; i < pacientes.length; i++) {
         console.log(altura);
         console.log(gordura);
 
+        var pacienteTr = document.createElement("tr");
+
+        var nomeTd = document.createElement("td");
+        var pesoTd = document.createElement("td");
+        var alturaTd = document.createElement("td");
+        var gorduraTd = document.createElement("td");
+        var imcTd = document.createElement("td");
+
     
     });  // nesse caso é nescessário o ; para encerrar a linha
