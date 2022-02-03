@@ -1,3 +1,4 @@
+// função para adicionar ao formulário assim que for clicado
 var botaoAdicionar = document.querySelector("#adicionar-paciente");
 botaoAdicionar.addEventListener("click", function(event) {
     event.preventDefault();
@@ -12,7 +13,6 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     //adicionando o paciente na tabela.
     var tabela = document.querySelector("#tabela-pacientes");
-
     tabela.appendChild(pacienteTr);
 
     form.reset(); // limpa os campos do formulário
@@ -33,6 +33,7 @@ function obtemPacienteDoFormulario(form) {
     return paciente;
 }
 
+//monta as Tr colocando as devidas classes
 function montaTr(paciente){
     var pacienteTr = document.createElement("tr");
     pacienteTr.classList.add("paciente");
@@ -45,27 +46,8 @@ function montaTr(paciente){
 
     return pacienteTr;
 }
-    /*var nomeTd = document.createElement("td");
-    var pesoTd = document.createElement("td");
-    var alturaTd = document.createElement("td");
-    var gorduraTd = document.createElement("td");
-    var imcTd = document.createElement("td");
 
-    nomeTd.textContent = paciente.nome;
-    pesoTd.textContent = paciente.peso;
-    alturaTd.textContent = paciente.altura;
-    gorduraTd.textContent = paciente.gordura;
-    imcTd.textContent = paciente.imc; 
-
-    function montaTd(dado, classe) {
-        var td = document.createElement("td");
-        td.classList.add("info-nome");
-        td.textContent = paciente.nome;
-    
-        return td;
-    } */
-
-
+//monta as Td e adiciona devidas classes, para ser chamado no nontatr
 function montaTd(dado,classe){
     var td = document.createElement("td");
     td.textContent = dado;
