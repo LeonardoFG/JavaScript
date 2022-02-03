@@ -6,14 +6,8 @@ botaoAdicionar.addEventListener("click", function(event) {
     //Extraindo informacoes do paciente do form
     var paciente = obtemPacienteDoFormulario(form);
 
-    console.log(paciente);
-
     //cria a tr e a td do paciente
-    function montaTr(paciente) {
-        var pacienteTr = document.createElement("tr");
-    
-        return pacienteTr;
-    }
+    var pacienteTr = montaTr(paciente);
 
     //adicionando o paciente na tabela.
     var tabela = document.querySelector("#tabela-pacientes");
