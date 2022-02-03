@@ -45,6 +45,7 @@ function obtemPacienteDoFormulario(form) {
         altura: form.altura.value,
         gordura: form.gordura.value,
         imc: calculaImc(form.peso.value, form.altura.value)
+        //não precisa de ; no final, apenas , separando os elementos
     }
     return paciente;
 }
