@@ -1,12 +1,17 @@
 <button class="botao">Calcula</button>
 <input class="numero">
-<input class="tabuada"
-><span class="resultado"></span>
+<input class="tabuada">
+<span class="resultado"></span>
 
 <script>
 
     function buscaElemento(seletor) {
         return document.querySelector(seletor);
+    }
+
+    function aplicaTabuada(numero, tabuada) {
+
+        return numero * tabuada;
     }
 
     var botao = buscaElemento('.botao');
@@ -16,7 +21,7 @@
 
     botao.addEventListener('click', function() {
 
-        resultado.textContent = numero.value * tabuada.value;
+        resultado.textContent = aplicaTabuada(numero.value, tabuada.value);
 
     });
 
