@@ -15,6 +15,8 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     tabela.appendChild(pacienteTr);
 
+    form.reset(); // limpa os campos do formulário
+
 });   // nesse caso é nescessário o ; para encerrar a linha
 
 //Extraindo informacoes do paciente do form
