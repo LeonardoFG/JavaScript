@@ -49,3 +49,27 @@ function obtemPacienteDoFormulario(form) {
     }
     return paciente;
 }
+
+function montaTr(paciente) {
+    var pacienteTr = document.createElement("tr");
+
+    var nomeTd = document.createElement("td");
+    var pesoTd = document.createElement("td");
+    var alturaTd = document.createElement("td");
+    var gorduraTd = document.createElement("td");
+    var imcTd = document.createElement("td");
+
+    nomeTd.textContent = paciente.nome;
+    pesoTd.textContent = paciente.peso;
+    alturaTd.textContent = paciente.altura;
+    gorduraTd.textContent = paciente.gordura;
+    imcTd.textContent = paciente.imc;
+
+    pacienteTr.appendChild(nomeTd);
+    pacienteTr.appendChild(pesoTd);
+    pacienteTr.appendChild(alturaTd);
+    pacienteTr.appendChild(gorduraTd);
+    pacienteTr.appendChild(imcTd);
+
+    return pacienteTr;
+}
