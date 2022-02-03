@@ -46,11 +46,29 @@ function montaTr(paciente) {
     gorduraTd.textContent = paciente.gordura;
     imcTd.textContent = paciente.imc;
 
-    pacienteTr.appendChild(nomeTd);
+    function montaTd(dado, classe) {
+        var td = document.createElement("td");
+        td.classList.add("info-nome");
+        td.textContent = paciente.nome;
+    
+        return td;
+    }
+    
+
+}
+
+function montaTd(dado, classe) {
+    var td = document.createElement("td");
+    td.classList.add("info-nome");
+    td.textContent = paciente.nome;
+
+    return td;
+}
+
+/*  pacienteTr.appendChild(nomeTd);
     pacienteTr.appendChild(pesoTd);
     pacienteTr.appendChild(alturaTd);
     pacienteTr.appendChild(gorduraTd);
     pacienteTr.appendChild(imcTd);
 
-    return pacienteTr;
-}
+    return pacienteTr;  */
