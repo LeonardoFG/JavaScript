@@ -69,6 +69,7 @@ for (var i = 0; i < pacientes.length; i++) {
         pesoTd.textContent = peso;
         alturaTd.textContent = altura;
         gorduraTd.textContent = gordura;
+        
 
         pacienteTr.appendChild(nomeTd);
         pacienteTr.appendChild(pesoTd);
