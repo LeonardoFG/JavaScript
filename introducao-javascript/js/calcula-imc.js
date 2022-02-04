@@ -40,7 +40,7 @@ for (var i = 0; i < pacientes.length; i++) {
 
 function validaPeso(peso){
 
-    if (peso >= 0 && peso <= 1000) {
+    if (peso >= 0 && peso <= 200) {
         return true;
     } else {
         return false;
