@@ -34,6 +34,13 @@ botaoAdicionar.addEventListener("click", function(event) {
 
 });   // nesse caso é nescessário o ; para encerrar a linha
 
+function exibeMensagensDeErro(erros){
+    var ul = document.querySelector("#mensagens-erro");
+    for(var i = 0; i < erros.lenght ; i++){
+        var erro = erros[i];
+    }
+}
+
 //Extraindo informacoes do paciente do form
 function obtemPacienteDoFormulario(form) {
 
