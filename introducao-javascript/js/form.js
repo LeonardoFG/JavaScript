@@ -72,6 +72,9 @@ function montaTd(dado,classe){
 }
 
 function validaPaciente(paciente){
+
+    var erros = [];
+
     if(validaPeso(paciente.peso)){
         return "";
     }else {
