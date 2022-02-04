@@ -76,14 +76,14 @@ function validaPaciente(paciente){
     var erros = [];
 
     if(validaPeso(paciente.peso)){
-        return "";
+        
     }else {
-        return "O Peso é Inválido !!!";
+        erros.push("O Peso é Inválido !!!");
     }
 
     if (validaAltura(paciente.altura)) {
-        return "";
+        
     } else {
-        return "Altura é inválida !!!";
+        erros.push("Altura é inválida !!!");
     }
 }
