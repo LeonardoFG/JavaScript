@@ -77,7 +77,7 @@ function validaPaciente(paciente){
 
     if(!validaPeso(paciente.peso)) erros.push("O Peso é Inválido !!!"); //posso fazer um if simples sem {}'s
     
-    if (!validaAltura(paciente.altura)) erros.push("Altura é inválida !!!");
+    if(!validaAltura(paciente.altura)) erros.push("Altura é inválida !!!");
 
     return erros;
 
