@@ -64,8 +64,8 @@ function montaTd(dado,classe){
 
 function validaPaciente(paciente){
     if(validaPeso(paciente.peso)){
-        return true;
+        return "";
     }else {
-        return false;
+        return "O Peso é Inválido !!!";
     }
 }
