@@ -16,8 +16,8 @@ botaoAdicionar.addEventListener("click", function(event) {
     var erros = validaPaciente(paciente);
     
     if(erros.length > 0){
-        var mensagemErro = document.querySelector("#mensagem-erro");
-        mensagemErro.textContent = erros;
+        exibeMensagensDeErro(erros);
+
         return;
     }
 
