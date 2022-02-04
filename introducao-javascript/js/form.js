@@ -85,9 +85,13 @@ function validaPaciente(paciente){
 
     var erros = [];
 
+    if(paciente.nome.length == 0) erros.push("O nome do pcaciente não pode ser em branco");
+
     if(!validaPeso(paciente.peso)) erros.push("O Peso é Inválido !!!"); //posso fazer um if simples sem {}'s
     
     if(!validaAltura(paciente.altura)) erros.push("Altura é inválida !!!");
+
+    if(paciente.gordura.length == 0) erros.push("A gordura corporal não pode ser em branco.");
 
     return erros;
 
