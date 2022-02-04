@@ -101,6 +101,9 @@ function validaPaciente(paciente){
 
     if(paciente.altura.length == 0) erros.push("A altura não pode ser em branco.");
 
+    // verificação para não aceitar altura com virgula
+    if(paciente.altura.textContent = ",") erros.push("Deve ser usado ponto(.) ao invés de virgula(,).");
+
     return erros;
 
 }
