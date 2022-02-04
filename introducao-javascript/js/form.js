@@ -11,6 +11,12 @@ botaoAdicionar.addEventListener("click", function(event) {
     var pacienteTr = montaTr(paciente);
     pacienteTr.classList.add("paciente");
 
+    //valida paciente, se invalido mostra msg console
+    if (!validaPaciente(paciente)) {
+        console.log("Paciente inválido");
+        return;
+    }
+
     //adicionando o paciente na tabela.
     var tabela = document.querySelector("#tabela-pacientes");
     tabela.appendChild(pacienteTr);
