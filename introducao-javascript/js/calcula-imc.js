@@ -49,7 +49,7 @@ function validaPeso(peso){
 
 function validaAltura(altura) {
 
-    if (altura >= 0 && altura <= 3.0) {
+    if (altura >= 0 && altura <= 3.0 && altura.textContent != ",") {
         return true;
     } else {
         return false;
