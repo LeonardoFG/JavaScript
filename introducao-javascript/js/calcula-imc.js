@@ -38,6 +38,15 @@ for (var i = 0; i < pacientes.length; i++) {
     }
 }
 
+function validaPeso(peso){
+
+    if (peso >= 0 && peso <= 1000) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function calculaImc(peso, altura) {
     var imc = 0;
 
