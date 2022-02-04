@@ -77,4 +77,10 @@ function validaPaciente(paciente){
     }else {
         return "O Peso é Inválido !!!";
     }
+
+    if (validaAltura(paciente.altura)) {
+        return "";
+    } else {
+        return "Altura é inválida !!!";
+    }
 }
