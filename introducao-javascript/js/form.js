@@ -12,6 +12,13 @@ botaoAdicionar.addEventListener("click", function(event) {
     pacienteTr.classList.add("paciente");
 
     //valida paciente, se invalido mostra msg console
+    var pacienteTr = montaTr(paciente);
+    var erro = validaPaciente(paciente);
+    
+    if(erro.length > 0){
+        return;
+    }
+
     if (!validaPaciente(paciente)) {
         console.log("Paciente inválido");
         return;
