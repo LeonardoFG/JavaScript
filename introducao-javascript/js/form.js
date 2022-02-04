@@ -33,6 +33,9 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     form.reset(); // limpa os campos do formulário
 
+    var mensagensErro = document.querySelector("#mensagens-erro");
+    mensagensErro.innerHTML = "";
+
 });   // nesse caso é nescessário o ; para encerrar a linha
 
 function exibeMensagensDeErro(erros){
