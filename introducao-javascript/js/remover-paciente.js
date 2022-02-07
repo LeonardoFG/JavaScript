@@ -4,7 +4,11 @@ var tabela = document.querySelector("table");
 
 tabela.addEventListener("dblclick", function(event) {
     event.target.parentNode.classList.add("fadeOut");
-    //event.target.parentNode.remove();
+    
+    setTimeout(function() {
+        event.target.parentNode.remove();
+    }, 500); //faz a função remove aguardar 0,5s para dar para ver a animação
+
 });
 
 /*pacientes.forEach(function(paciente) {
