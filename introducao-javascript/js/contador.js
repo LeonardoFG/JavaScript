@@ -6,4 +6,9 @@ function atualizaCaracteres() {
 
     var contador = document.querySelector("#numero-caracteres");
     contador.innerHTML = caracteres;
+
 }
+
+
+var campoPostagem = document.querySelector("#corpo-postagem");
+campoPostagem.addEventListener("input", atualizaCaracteres);
