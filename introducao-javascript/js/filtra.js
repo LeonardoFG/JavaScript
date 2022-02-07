@@ -12,7 +12,7 @@ campoFiltro.addEventListener("input", function() {
 
             var expressao = new RegExp(this.value, "i"); //para pesquisar conforme for digitando
 
-            if (!expressao.test(nome)) {
+            if (!expressao.test(nome)) { //irá retornar verdadeiro caso o nome contenha a expressão, ou falso caso não contenha
                 paciente.classList.add("invisivel");
             } else {
                 paciente.classList.remove("invisivel");
