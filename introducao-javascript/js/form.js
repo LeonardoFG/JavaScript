@@ -32,7 +32,7 @@ botaoAdicionar.addEventListener("click", function(event) {
     tabela.appendChild(pacienteTr);
 
     form.reset(); // limpa os campos do formulário
-
+    focusNome(); //para focar no campo nome
     var mensagensErro = document.querySelector("#mensagens-erro");
     mensagensErro.innerHTML = "";
 
@@ -107,3 +107,8 @@ function validaPaciente(paciente){
     return erros;
 
 }
+
+//para focar no campo nome
+focusNome = function getFocus() {
+    document.getElementById("nome").focus();
+  }
