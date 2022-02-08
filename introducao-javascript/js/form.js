@@ -12,7 +12,7 @@ botaoAdicionar.addEventListener("click", function(event) {
     pacienteTr.classList.add("paciente");
 
     //valida paciente, se invalido mostra msg console
-    var pacienteTr = montaTr(paciente);
+    //var pacienteTr = montaTr(paciente);
     var erros = validaPaciente(paciente);
     
     console.log(erros);
@@ -28,8 +28,10 @@ botaoAdicionar.addEventListener("click", function(event) {
     }
 
     //adicionando o paciente na tabela.
-    var tabela = document.querySelector("#tabela-pacientes");
-    tabela.appendChild(pacienteTr);
+    //var tabela = document.querySelector("#tabela-pacientes");
+    //tabela.appendChild(pacienteTr);
+
+    adicionaPacienteNaTabela(paciente);
 
     form.reset(); // limpa os campos do formulário
     focusNome(); //para focar no campo nome
@@ -37,6 +39,13 @@ botaoAdicionar.addEventListener("click", function(event) {
     mensagensErro.innerHTML = "";
 
 });   // nesse caso é nescessário o ; para encerrar a linha
+
+//para adicionar paciente do JSON botão busca paciente
+function adicionaPacienteNaTabela(paciente) {
+    var pacienteTr = montaTr(paciente);
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
+}
 
 function exibeMensagensDeErro(erros){
     var ul = document.querySelector("#mensagens-erro");
