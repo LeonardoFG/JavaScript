@@ -1,21 +1,25 @@
 var botaoAdicionar = document.querySelector("#buscar-pacientes");
 
 botaoAdicionar.addEventListener("click", function(){
-    console.log("Buscando pacientes...");
 
-    var xhr = new XMLHttpRequest();
+    event.preventDefault();
 
-    xhr.open("GET", "https://api-pacientes.herokuapp.com/pacientes");
+    var form = document.querySelector("#form-adiciona");
+    var paciente = obtemPacienteDoFormulario(form);
 
-    xhr.addEventListener("load", function(){
-        var resposta = xhr.responseText;
-        console.log(resposta);
-        console.log(typeof resposta);
+    var pacienteTr = montaTr(paciente);
 
-        var pacientes = JSON.parse(resposta);
-        console.log(pacientes);
-        console.log(typeof pacientes);
-    });
+    var erros = validaPaciente(paciente);
+    if (erros.length > 0) {
+        exibeMensagensDeErro(erros);
+        return;
+    }
 
-    xhr.send();
+    var tabela = document.querySelector("#tabela-pacientes");
+
+    tabela.appendChild(pacienteTr);
+
+    form.reset();
+    var mensagensErro = document.querySelector("#mensagens-erro");
+    mensagensErro.innerHTML = "";
 });
