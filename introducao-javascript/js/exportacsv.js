@@ -1,3 +1,5 @@
+// https://stackoverflow.com/questions/15547198/export-html-table-to-csv-using-vanilla-javascript
+
 function export2csv() {
     let data = "";
     const tableData = [];
