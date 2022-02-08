@@ -17,6 +17,10 @@ botaoAdicionar.addEventListener("click", function(){
         } else {
             console.log(xhr.status);
             console.log(xhr.responseText);
+
+            //para exibir mensagem de erro
+            var erroAjax = document.querySelector("#erro-ajax");
+            erroAjax.classList.remove("invisivel");
         }
     });
 
