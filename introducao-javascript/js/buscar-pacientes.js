@@ -6,8 +6,9 @@ botaoAdicionar.addEventListener("click", function(){
     xhr.open("GET", "https://api-pacientes.herokuapp.com/pacientes");
 
     xhr.addEventListener("load", function() {
-
+        var erroAjax = document.querySelector("#erro-ajax");
         if (xhr.status == 200) { //checa se a importação deu certo
+            erroAjax.classList.add("invisivel"); // deixa invisivel a mensagem de erro
             var resposta = xhr.responseText;
             var pacientes = JSON.parse(resposta);
 
@@ -19,7 +20,6 @@ botaoAdicionar.addEventListener("click", function(){
             console.log(xhr.responseText);
 
             //para exibir mensagem de erro
-            var erroAjax = document.querySelector("#erro-ajax");
             erroAjax.classList.remove("invisivel");
         }
     });
