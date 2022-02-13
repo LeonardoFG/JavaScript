@@ -7,7 +7,9 @@ const colunas = document.querySelectorAll('table tbody tr td') // colunas, impos
 const cabecalho = document.querySelectorAll('table thead tr th') // thead, imposibilita a tabela inteira ser removida
 
 tabela.addEventListener("dblclick", function(event) {
-    if(tabela != linhas && tabela != colunas && tabela != cabecalho){
+    const elementoClicado = event.target
+
+    if(elementoClicado != linhas && elementoClicado != colunas && elementoClicado != cabecalho){
         event.target.parentNode.classList.add("fadeOut");
             
         setTimeout(function() {
